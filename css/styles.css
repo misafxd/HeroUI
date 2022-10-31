@@ -1,0 +1,127 @@
+:root{
+    --mainfont: 'Roboto' , sans-serif;
+    --secondaryfont: 'Roboto Condensed', sans-serif;
+    --primary: #1B90FC;
+    --white: white;
+    --black20: #202020;
+}
+
+body {
+    font-family: var(--mainfont);
+}
+
+
+p, h1 {
+    margin: 0;
+}
+
+.hero h1 {
+    font-family: var(--secondaryfont);
+    font-size: 40px;
+    margin-block-end: 8px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-block-end: 24px;
+}
+
+
+button {
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    padding-inline: 32px;
+    padding-block: 16px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    inline-size: 100%;
+}
+
+.hero-content {
+    display: flex;
+    block-size: 768px;
+    align-items: center; 
+}
+
+.card{
+    max-inline-size: 640px;
+    margin-inline: 24px;
+    color: var(--white);
+    z-index: 2;
+    position: absolute;
+}
+
+
+.hero {
+    background-image: url(../images/img.jpg); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: var(--black20);
+    position: relative;
+    clip-path: polygon(0 0, 100% 0,100% calc(100% - 80px),0 100%);
+  
+}
+
+@media screen and (min-width: 1366px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .wrapper {
+        max-inline-size: 1664px;
+        margin: auto;
+    }
+
+    .hero-content {
+        display: flex;
+        block-size: 768px;
+        align-items: center;
+        
+        
+    }
+    
+    .card{
+        max-inline-size: 412px;
+        margin-inline-start: 83px;
+        margin-inline-end: 188px;
+        color: var(--white);
+        z-index: 2;
+        position: relative;
+    }
+    
+    .hero::before {
+        content: '';
+        inline-size: 50%;
+        display: block;
+        block-size: 100%;
+        background-color: var(--black20);
+        position: absolute;
+        inset-block: 0;
+        z-index: 1;
+        clip-path: polygon(0 0, calc(100% - 151px) 0, 100% 100%, 0 100%);
+    }
+    
+    .hero {
+        background-image: url(../images/img.jpg);
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--black20);
+        position: relative;
+        clip-path: polygon(0 0, 100% 0,100% calc(100% - 128px),0 100%);
+    }
+    
+    img {
+        max-inline-size: 100%;
+    }
+}
+
